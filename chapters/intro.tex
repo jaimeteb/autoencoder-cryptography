@@ -1,0 +1,33 @@
+% Autoencoder neural networks are a type of deep learning algorithm that has shown great potential in data compression, noise reduction, and feature extraction. When applied to digital cryptography, autoencoder neural networks can be used to encrypt and decrypt sensitive data in a more secure and efficient way by creating highly complex and unique encryption keys that are difficult to predict or duplicate, making them more resistant to attacks.
+
+
+% This is my introduction \cite{icaart20}.
+
+\subsection{Cryptography}
+
+Cryptography is the study of techniques for secure communication, so that third parties cannot read messages sent between the sender and the receiver. An encryption algorithm is a mathematical function that transforms a message into a form that is difficult to predict or duplicate. Several encryption methods have been developed over the years, the most popular and widely used involve the use of a key, which defines how the message is encoded and decoded, for example, the Advanced Encryption Standard (AES) \cite{aes}. Cryptography has many applications, such as authentication, confidentiality, integrity, and non-repudiation.
+
+\subsection{Autoencoder Neural Networks}
+
+Autoencoders are a type of neural networks whose purpose is to learn efficient representations of data by undergoing unsupervised training \cite{autoencoder}. When training an autoencoder, the network learns to reconstruct the original data by encoding the information in a latent space, which is a representation that captures the essential features of the data. These neural networks have a symmetric architecture, in other words, their input is the same shape as their output, and the middle layer is the one responsible for the representation of the data. The middle layer is usually called the code layer.
+
+Autoencoder neural networks are used in tasks such as dimensionality reduction, anomaly detection, signal processing, data compression, and cryptography.
+
+\begin{figure}[h]
+    \centering
+    \input{tikz/autoencoder.tex}
+    \caption{Autoencoder neural network.}
+    \label{fig:autoencoder}
+\end{figure}
+
+A basic autoencoder architecture is shown in \ref{fig:autoencoder}. The autoencoder may be expressed in mathematical terms as follows:
+%
+\begin{equation}\label{eq:autoencoder}
+    \begin{split}
+        z &= g(x) \\
+        x' &= f(z) \\
+        x &\approx x' \\
+    \end{split}
+\end{equation}
+%
+where $x$ is the input, $z$ is the code, $x'$ is the output, $g$ is the encoder, and $f$ is the decoder.

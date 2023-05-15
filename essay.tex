@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage[sorting=none, style=ieee, block=ragged]{biblatex}
+\usepackage{hyperref}
+\pgfplotsset{compat=1.17}
+
+\usetikzlibrary{matrix, positioning, arrows}
+
+% title
+\title{Autoencoder Neural Networks for Digital Cryptography}
+\author{Jaime Tenorio}
+\date{Óbuda University \\ John von Neumann Faculty of Informatics \\ Information and Coding Theory \\ May 2023}
+
+% references
+\addbibresource{bib/references.bib}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\input{chapters/intro.tex}
+
+\section{Autoencoders for Cryptography}
+\input{chapters/auto4crypto.tex}
+
+\section{Case Study}
+\input{chapters/casestudy.tex}
+
+\section{Conclusion}
+\input{chapters/conclusion.tex}
+
+\printbibliography
+
+\end{document}

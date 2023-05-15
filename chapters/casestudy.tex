@@ -1,0 +1,12 @@
+We can demonstrate an autoencoder for cryptography by attempting to encrypt binary representation of characters. Previous studies show the viability of such autoencoders for 8-bit ASCII characters \cite{icaart20}, so we will expand on this example and do it for 16-bit Unicode characters.
+
+Firstly, the training data is determined by generating all Unicode characters, that is, binary representations of all integers from 32 to 65535. If we define the training data as $X$, then it can be defined as follows:
+
+\begin{equation}
+    X = \{x \in \mathbb{R}^{16} \mid x = \text{bin}(i), i \in [32, 65535]\}
+\end{equation}
+
+As it was discussed previously, the output of the neural network will be of the same dimension as its input. The depth of the neural network depends on the specific application, and the complexity of the system. Many sources suggest that a hidden encoder layer and a hidden decoder layer are sufficient for general purposes \cite{autoencoder2}. In this case, we will use a hidden layer of 32 neurons for both the encoder and the decoder. The activation function for the hidden layers will be the rectified linear unit (ReLU) function, and the output layer will use the sigmoid function. The sigmoid function is used because it is a good choice for binary classification problems. The ReLU function is used because it is a good choice for hidden layers in general, and it is the most common activation function for autoencoders \cite{autoencoder3}.
+
+Since the encoding dimension will represent the characters, it is the most important parameter of the autoencoder. To determine an appropriate encoding dimension, we may train multiple autoencoders with different encoding dimensions, and compare their performance. The performance of the autoencoder will be measured by the percentage of characters that are correctly reconstructed. The encoding dimensions to be tested are 8, 16, and 32.
+

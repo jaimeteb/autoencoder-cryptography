@@ -1,0 +1,12 @@
+The nature of the autoencoder architecture makes it a suitable technique for cryptography, since the code layer may be used as an encrypted message. Essentially, a message can be encrypted by passing it through the trained encoder part of the network and extracting the output from the code layer. Then, the encrypted message is decoded by passing it through the decoder part of the network. The encoded message can then be transmitted securely, because the latent representation may not reveal sensitive information, even if it may be intercepted.
+
+One advantage of autoencoder networks for cryptography is that they are versatile. Autoencoders can be adapted to any kind of data, such as images, text, numerical data, etc., and can be designed to learn codes of any size. Another advantage is their ability to filter noise and redundancies while encoding, due to the efficient representation of the data in the latent space.
+
+Autoencoder architectures may vary depending on the cryptographic use case. Some examples include:
+
+\begin{itemize}
+    \item \textbf{Fully connected autoencoder.} This is the most basic autoencoder, which consists of fully connected layers. This architecture can be used in general cryptography for encoding and decoding messages.
+    \item \textbf{Convolutional autoencoder.} The use of convolutional layers in autoencoder architecture allows for the capture of spatial information, therefore this can be used for image or video cryptography.
+    \item \textbf{Recurrent autoencoder.} Recurrent neural networks can learn sequential data efficiently. An autoencoder with this architecture may be useful for text encryption.
+\end{itemize}
+

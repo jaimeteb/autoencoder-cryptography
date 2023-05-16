@@ -29,7 +29,14 @@ The results of reconstruction efficiency for the different encoding dimensions a
     \label{tab:results}
 \end{table}
 
-We may assume that encoding dimensions bigger than 16 will also have 100\% reconstruction efficiency, but they will be more computationally expensive. Therefore, we can conclude that the best autoencoder for this application is the one with an encoding dimension of 16.
+We may assume that encoding dimensions bigger than 16 will also have 100\% reconstruction efficiency, but they will be more computationally expensive. Therefore, we can conclude that the best autoencoder for this application is the one with an encoding dimension of 16. The system can be tested by encoding and decoding text with Unicode characters, as it is shown in \autoref{fig:unicode}. In the figure we can see that the autoencoder is capable of reconstructing all characters without error. A preview of the first two character encryptions is shown too.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/unicode.png}
+    \caption{Encoding and decoding Unicode characters.}
+    \label{fig:unicode}
+\end{figure}
 
 \subsection{Discussion}
 
@@ -39,4 +46,4 @@ Of course, another option is to utilize a different activation function for the 
 
 Nonetheless, this example shows that autoencoders can be used for cryptography, and that they can be used to encrypt and decrypt messages without error. This shows that autoencoders can be used for lossless encryption, although it would take a more sophisticated system to achieve lossless encryption with a reasonable message size.
 
-% Furthermore, there are security concerns
+Furthermore, the complexity of AES, the most popular encryption algorithm, is $O(n)$, where $n$ is the number of bits in the message \cite{aes}. This means that the complexity of AES is linear with respect to the message size. On the other hand, the complexity of the autoencoder is $O(n^2)$, where $n$ is the number of neurons in the network. This means that the complexity of the autoencoder is quadratic with respect to the message size.
